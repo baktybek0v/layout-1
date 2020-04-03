@@ -1,0 +1,47 @@
+.section-work-process {
+    .work-process {
+        padding: 100px 0;
+        text-align: center;
+
+        &__title {
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+            font-size: $fSizeSubtitle;
+            color: $colorBold;
+            margin-bottom: 40px;
+        }
+
+        &__text {
+            font-size: $fSizeNormal;
+            font-family: 'Nunito Sans Regular', Roboto;
+            color: $colorText;
+            line-height: 24px;
+            margin-bottom: 60px;
+        }
+
+        &__video {
+            padding: 0;
+
+            height: auto;
+            overflow: hidden;
+
+            video {
+                display: block;
+                margin: 0;
+                max-width: 100%;
+                height: auto;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-work-process {
+        padding-left: 15px;
+        padding-right: 15px;
+
+        .work-process {
+            padding: 50px 0;
+        }
+    }
+}

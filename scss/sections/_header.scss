@@ -1,0 +1,240 @@
+.section-header {
+
+    background-color: $bgGrey;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: 10%;
+    user-select: none;
+    background-image: url("../img/pink.jpg");
+    
+    position: relative;
+    &__inner {
+        padding-top: 15px;
+        padding-bottom: 200px;
+
+    }
+
+    .show-gamburger {
+        display: none;
+    }
+
+    .navbar {
+
+        &__brand {
+            float: left;
+            text-decoration: none;
+            opacity: 0.4;
+            transition: all .25s ease-in-out;
+
+            &:hover {
+                transition: all .5s ease-in-out;
+                opacity: 1;
+                transform: rotate(360deg);
+            }
+        }
+
+        &__brand-logo {
+            width: 32px;
+            height: 32px;
+        }
+
+        &__menu {
+            list-style: none;
+            float: right;
+            line-height: 32px;
+        }
+
+        &__menu-item {
+            float: left;
+            text-transform: uppercase;
+            font-size: 12px;
+
+            border-bottom: 2px solid transparent;
+            transition: color .20s ease-in;
+
+            &:hover {
+                border-bottom: 2px solid gold;
+                transition: color .20s ease-in;
+            }
+            &.active{
+                 border-bottom: 2px solid gold;
+            }
+        }
+
+        &__menu-item:not(:first-child) {
+            margin-left: 30px;
+        }
+
+        &__menu-link {
+            text-decoration: none;
+            font-family: 'Montserrat';
+            color: $colorBold;
+            transition: color .20s ease-in;
+
+            &:hover {
+                color: $colorAccent;
+                transition: color .20s ease-in;
+            }
+            
+            &.active{
+                color: $colorAccent;
+            }
+        }
+
+    }
+
+    .representation {
+        margin-top: 150px;
+        float: right;
+        padding-right: 30px;
+
+        &__title {
+            font-size: $fSizeTitle;
+            color: $colorTitle;
+            user-select: text;
+        }
+
+        &__text {
+            color: $colorText;
+            font-size: $fSizeInscription;
+            margin-top: 20px;
+            margin-bottom: 40px;
+            margin-left: 5px;
+            line-height: 28px;
+            user-select: text;
+        }
+
+        .btn-primary {
+            display: inline-block;
+        }
+    }
+}
+
+.navbarToggle {
+    height: auto !important;
+    overflow: visible !important;
+}
+
+.white {
+    color: #fff !important;
+}
+
+@media screen and (max-width: 992px) {
+    .section-header {
+        .representation {
+            display: block;
+            width: 100%;
+            margin-top: 120px;
+            padding: 0;
+            text-align: center;
+
+        }
+    }
+}
+
+@media screen and (max-width: 730px) {
+    .section-header {
+        position: relative;
+        padding: 0;
+        padding-bottom: 150px;
+
+        .container {
+            width: 100%;
+            padding: 0;
+        }
+
+        .show-gamburger {
+            top: 14px;
+            left: 20px;
+            cursor: pointer;
+            position: absolute;
+            display: block;
+            color: black;
+            line-height: 1;
+            font-size: 32px;
+        }
+
+        .navbar {
+            background: black;
+            height: 0;
+            margin: 0;
+            width: 100%;
+            overflow: hidden;
+
+            &__brand {
+                float: right;
+                margin-top: 10px;
+                margin-right: 25px;
+                opacity: 1;
+            }
+
+            &__menu {
+                padding-top: 55px;
+                float: none;
+            }
+
+            &__menu-item {
+                display: block;
+                width: 100%;
+                float: right;
+                height: 50px;
+                text-align: center;
+
+                transition: border .15s ease-in-out;
+                line-height: 50px;
+
+            }
+
+            &__menu-link {
+                color: #fff;
+                opacity: 0.8;
+
+            }
+
+        }
+    }
+}
+
+
+@media screen and (max-width: 550px) {
+    .section-header {
+        padding-bottom: 80px;
+
+        .representation {
+            margin-top: 80px;
+
+            &__title {
+                font-size: $fSizeSubtitle;
+                margin-bottom: 50px;
+            }
+
+            &__text {
+                font-size: $fSizeText;
+                line-height: 20px;
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
+
+@keyframes showNavbar {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes hideNavbar {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}
+
+

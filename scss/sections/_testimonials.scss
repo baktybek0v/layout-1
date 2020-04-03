@@ -1,0 +1,195 @@
+.btn-control {
+    cursor: pointer;
+    position: absolute;
+    width: 100px;
+    height: 70px;
+    border-radius: 50%;
+    top: 50%;
+    transform: translateY(-50%);
+    background: $colorSecondary;
+    transition: background .25s ease-in;
+
+    &:hover {
+        transition: background .25s ease-in;
+        background: $bgGrey;
+    }
+
+    &:hover .control {
+        color: #000;
+        transition: background .25s ease-in;
+    }
+
+    &.left {
+        left: -60px;
+    }
+
+    &.right {
+        right: -60px;
+    }
+}
+
+.control {
+    position: absolute;
+    font-weight: 900;
+    font-family: 'Font Awesome 5 Free', 'Font Awesome 5 Brands';
+    color: rgba(#fff, 0.8);
+    font-size: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+    border: none;
+    outline: none;
+    &.control-prev {
+        &:after {
+            content: "\f30a";
+        }
+
+        left: 65px;
+    }
+
+    &.control-next {
+        &:after {
+            content: "\f30b";
+        }
+
+        right: 65px;
+    }
+}
+
+.section-testimonials {
+    padding: 160px 0;
+    text-align: center;
+    overflow: hidden;
+    position: relative;
+    background-color: $colorAccent;
+    
+    .indicator{
+        
+        position: absolute;
+        bottom: 50px;
+        left: 50%;
+        transform: translateX(-50%);
+        
+        &-item{
+            display: inline-block;
+            width: 9px;
+            height: 9px;
+            border-radius: 50%;
+            background-color: $bgGrey;
+            cursor: pointer;
+            opacity: 0.6;
+            &:hover{
+                opacity: 1;
+                transition: all 0.2s ease;
+                box-shadow: 3px 3px 15px #fff,
+                        -3px -3px 15px #fff;
+            }
+        }
+        &-item:not(:last-child){
+            margin-right: 15px;
+        }
+        &-item.active{
+            opacity: 1;
+            width: 14px;
+            height: 14px;
+            background-color: $bgGrey;
+            box-shadow: 3px 3px 15px #fff,
+                        -3px -3px 15px #fff;
+        }
+    }
+    
+    .testimonials {
+        opacity: 1;
+        right: 0;
+        padding: 0;
+        position: relative;
+        transition-timing-function: ease-in-out;
+        transition-duration: 1.2s;
+        transition-property: all;
+
+    }
+
+    .testimonials__item {
+        float: left;
+        height: auto;
+        position: relative;
+    }
+    .location-slider{
+        display: block;
+        position: absolute;
+        bottom: -120px;
+        left: 30px;
+        font-size: 25px;
+        color: #fff;
+    }
+    .testimonials__item-quote {
+        font-family: 'Montserrat';
+        line-height: 36px;
+        font-size: $fSizeQuote;
+        color: $colorLigth;
+        margin-bottom: 30px;
+    }
+
+    .testimonials__item-author {
+        text-transform: uppercase;
+        background: none;
+        font-family: 'Montserrat';
+        padding: 0;
+        display: inline-block;
+        font-family: 'Montserrat';
+        font-size: $fSizeText;
+        line-height: 1;
+        margin-top: -10px;
+        color: $colorLigth;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .section-testimonials {
+        .location-slider {
+            bottom: -150px;
+             font-size: 20px;
+        }
+    }
+}
+
+
+@media screen and (max-width: 660px) {
+    .section-testimonials {
+        padding: 80px 0;
+        
+        .location-slider {
+            bottom: -60px;
+             font-size: 16px;
+        }
+        .testimonials__item {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .testimonials__item-quote {
+            font-size: $fSizeInscription;
+        }
+    }
+}
+
+@media screen and (max-width: 350px) {
+    .section-testimonials {
+        padding: 80px 0;
+        
+        .testimonials__item {
+            padding-left: 25px;
+            padding-right: 25px;
+        }
+
+        .testimonials__item-quote {
+            font-size: $fSizeText;
+            line-height: 20px;
+            margin-bottom: 12px;
+        }
+
+        .testimonials__item-author {
+            font-size: 9px;
+            text-transform: capitalize;
+        }
+    }
+}

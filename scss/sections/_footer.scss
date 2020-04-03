@@ -1,0 +1,101 @@
+.justifyContent {
+    text-align: justify;
+    font-size: 0;
+
+    &:after {
+        content: ' ';
+        display: inline-block;
+        visibility: hidden;
+        width: 100%;
+        height: 0;
+    }
+}
+
+footer {
+    background-color: $bgFooter;
+    padding-top: 100px;
+    padding-bottom: 85px;
+    overflow: hidden;
+
+    .content {
+        text-align: justify;
+
+        &:after {
+            content: ' ';
+            visibility: hidden;
+            height: 0;
+            display: inline-block;
+            width: 100%;
+        }
+
+        &__item {
+            list-style-type: none;
+            display: inline-block;
+            vertical-align: top;
+        }
+
+        &__rights {
+            margin-right: 80px;
+
+            p:first-child {
+                font-family: 'Montserrat', sans-serif;
+                font-size: $fSizeInscription;
+                line-height: 1;
+                margin-bottom: 24px;
+                color: $colorLigth;
+            }
+
+            p:last-child {
+                font-family: 'Nunito Sans Regular', Roboto;
+                line-height: 24px;
+                color: $colorFooter;
+            }
+        }
+    }
+
+    a,
+    .content__contact-site,
+    .content__contact-phone {
+        font-family: 'Nunito Sans Regular', Roboto;
+        display: block;
+        line-height: 25px;
+        font-size: $fSizeRegular;
+        color: $colorFooter;
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-footer .content .content__rights {
+        margin-right: 30px;
+    }
+}
+
+@media screen and (max-width: 760px) {
+    .section-footer {
+        .content {
+            &:after {
+                content: ' ';
+                clear: both;
+                height: 0;
+                line-height: 0;
+                display: block;
+            }
+
+            &__item.text {
+                margin-right: 80px;
+                margin-bottom: 15px;
+                margin-top: 15px;
+            }
+
+            &__rights {}
+
+            &__contact {
+
+                margin: 15px 100%;
+                margin-left: 0;
+            }
+
+        }
+
+    }
+}

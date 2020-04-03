@@ -1,0 +1,144 @@
+.section-feedback {
+    background: $bgLight;
+
+    .feedback {
+        padding: 100px 0;
+
+        &__title {
+            font-size: $fSizeSubtitle;
+            color: $colorTitle;
+            line-height: 1;
+            font-family: 'Montserrat', sans-serif;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        &__text {
+            font-family: 'Nunito Sans Regular', Roboto;
+            line-height: 24px;
+            font-size: $fSizeNormal;
+            text-align: center;
+            margin-bottom: 35px;
+        }
+
+        &__form {
+            padding: 0 220px;
+
+            .field {
+                padding-top: 20px;
+                padding-bottom: 20px;
+                padding-left: 15px;
+                line-height: 1;
+                border: none;
+                font-size: $fSizeRegular;
+                font-family: 'Nunito Sans Regular', Roboto;
+                white-space: nowrap;
+            }
+
+
+            &-email {
+                width: 100%;
+                margin-bottom: 30px;
+
+                input[type='text'] {
+                    display: block;
+                    float: left;
+                    margin-right: 16px;
+                }
+
+                input[type='email'] {
+                    display: block;
+                    float: left;
+                }
+
+                input[type='text'],
+                input[type='email'] {
+                    width: calc(50% - 8px);
+                }
+            }
+
+            &-title {
+                width: 100%;
+                background-color: $colorAccent;
+                margin-bottom: 30px;
+
+                input[type='text'] {
+                    display: block;
+                    width: 100%;
+                }
+            }
+
+            &-comment {
+                width: 100%;
+                margin-bottom: 30px;
+
+                textarea {
+                    display: block;
+                    width: 100%;
+                    resize: none;
+                    padding-bottom: 130px !important;
+                }
+            }
+        }
+
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-feedback {
+        .feedback {
+            padding: 70px 0;
+
+            &__form {
+                padding: 0 100px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 767px) {
+    .section-feedback {
+        .feedback {
+            &__form {
+                padding: 0 30px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .section-feedback {
+        .feedback {
+            &__form {
+                padding: 0 10px;
+
+                &-email {
+                    input[type='text'] {
+                        margin-right: 0;
+                        margin-bottom: 30px;
+
+                    }
+
+                    input[type='text'],
+                    input[type='email'] {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-feedback {
+        padding-left: 25px;
+        padding-right: 25px;
+
+        .feedback {
+            &__form {
+                padding: 0 0;
+            }
+        }
+    }
+}

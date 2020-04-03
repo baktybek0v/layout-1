@@ -1,0 +1,132 @@
+.section-achievements {
+    background: $colorAccent;
+
+    .content {
+        padding: 100px 0;
+
+        &__item {
+            float: left;
+            width: 25%;
+
+            .block-icon {
+                display: inline-block;
+                width: 48px;
+                height: 48px;
+                float: left;
+            }
+
+            .icon {
+
+                width: 48px;
+                height: 48px;
+            }
+
+        }
+
+
+        .projected__icon,
+        .working__icon,
+        .feedback__icon,
+        .client__icon {
+            margin-right: 25px;
+            position: relative;
+            top: -5px;
+        }
+
+        .info {
+            text-transform: uppercase;
+            font-family: 'Montserrat', sans-serif;
+
+            .number {
+                font-size: $fSizeQuote;
+                color: $colorLigth;
+            }
+
+            .text {
+                font-size: $fSizeText;
+                color: $colorLigth;
+            }
+        }
+    }
+
+}
+
+
+@media screen and (max-width: 992px) {
+    .section-achievements {
+        background: $colorAccent;
+
+        .content {
+            padding: 100px 0 20px;
+
+            &__item {
+                float: left;
+                width: 50%;
+                margin-bottom: 80px;
+
+                .icon {
+                    width: 56px;
+                    height: 56px;
+                }
+
+            }
+
+            .projected__icon,
+            .working__icon,
+            .feedback__icon,
+            .client__icon {
+                position: relative;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .section-achievements {
+        text-align: center;
+
+
+        .content {
+            font-size: $fSizeQuote;
+
+            &__item {
+                float: none;
+                width: 100%;
+
+                .block-icon {
+
+                    float: none;
+                    width: 100%;
+                    display: inline-block;
+                    margin: 0 auto;
+                }
+
+                .icon {
+                    width: 128px;
+                    height: 128px;
+                    display: inline-block;
+                    text-align: center;
+                }
+
+                .number:after {
+                    content: ' ';
+                    display: block;
+                }
+
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-achievements {
+        .content {
+            .icon {
+                width: 72px;
+                height: 72px;
+            }
+        }
+    }
+}

@@ -1,0 +1,123 @@
+.section-skills {
+
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-color: $bgGrey;
+    padding-left: 0;
+    padding-right: 0;
+
+    &__inner {
+        background-color: #f8f9f9;
+        width: 50%;
+        padding-left: 100px;
+    }
+
+    .content {
+        width: 80%;
+        padding-top: 150px;
+        padding-bottom: 150px;
+
+        &__title {
+            font-size: $fSizeSubtitle;
+            line-height: 80px;
+            color: $colorSubtitle;
+        }
+
+        &__lists {
+            list-style-type: none;
+            width: 100%;
+        }
+
+        &__lists-item {
+            font-size: $fSizeText;
+            margin-bottom: 20px;
+
+            .progress {
+                width: 100%;
+                height: 5px;
+                background-color: $bgProgress;
+            }
+
+            .progress-bar.first {
+                background-color: $colorAccent;
+                width: 75%;
+                height: 3px;
+            }
+
+            .progress-bar.second {
+                background-color: $colorAccent;
+                width: 90%;
+                height: 3px;
+            }
+
+            .progress-bar.third {
+                background-color: $colorAccent;
+                width: 65%;
+                height: 3px;
+            }
+        }
+
+        &__lists-subtitle {
+            text-transform: uppercase;
+            line-height: 30px;
+            margin-bottom: 5px;
+            text-shadow: 0 1px 1px rgba(30, 30, 30, .5);
+            color: $colorBlack;
+
+            .rating {
+                margin-left: 10px;
+            }
+
+        }
+
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .section-skills {
+        &__inner {
+            padding: 0 100px 0;
+            width: 100%;
+        }
+
+        .content {
+            width: 100%;
+            padding: 100px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .section-skills {
+        &__inner {
+            padding: 0 50px 0;
+        }
+
+        .content {
+            padding: 80px 0;
+        }
+    }
+}
+
+@media screen and (max-width: 410px) {
+    .section-skills {
+        &__inner {
+            padding: 0 20px 0;
+        }
+
+        .content {
+            padding: 50px 0;
+
+            &__title {
+                font-size: $fSizeQuote;
+            }
+
+            &__lists-subtitle {
+                text-transform: capitalize;
+                line-height: 20px;
+                text-shadow: none;
+            }
+        }
+    }
+}
